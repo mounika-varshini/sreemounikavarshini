@@ -1,0 +1,476 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+.container {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    background-color: black;
+    left: 10%;
+}
+
+.list {
+    list-style: none;
+    width: 350px;
+    background: #ecf5ff;
+    padding: 30px;
+    border-radius: 4px;
+
+    li {
+        padding: 10px 0 10px 0;
+    }
+
+    li:nth-child(odd) {
+        text-align: left;
+        border-left: 10px solid #1488F3;
+        padding-left: 4px;
+        border-bottom: 10px solid darken(#ecf5ff, 20%);
+    }
+
+    li:nth-child(even) {
+        text-align: right;
+        border-right: 10px solid #1488F3;
+        padding-right: 4px;
+        border-bottom: 10px solid darken(#ecf5ff, 20%);
+    }
+}
+
+
+.title {
+    font-family: "Cera Round Pro", Seasons;
+    src: url("../../assets/cera-round-pro-free-font/Demo_fonts/Fontspring-DEMO-ceraroundpro-regular.otf") format("truetype");
+    font-size: 60px;
+    font-weight: 600;
+    color: #cb6ce6;
+}
+
+.designation {
+    white-space: nowrap;
+    width: 0;
+    font-size: 1.6rem;
+    display: block;
+    color: rgb(181, 181, 181);
+}
+
+ul {
+    line-height: 1.5;
+    // font-family: 'Lato' sans-serif;
+    // // src: url("../../assets/cera-round-pro-free-font/Demo_fonts/Fontspring-DEMO-ceraroundpro-regular.otf") format("truetype");
+    font-size: 15.5px;
+    color: rgb(181, 181, 181);
+}
+
+.bar {
+    position: relative;
+    background-color: #d8d8d8;
+    height: 3px;
+    margin: 0 0 20px 0;
+}
+
+.bar-fill {
+    position: absolute;
+    height: 3px;
+}
+
+.bar-title {
+    position: relative;
+    // font-family: "Cera Round Pro";
+    // src: url("../../assets/cera-round-pro-free-font/Demo_fonts/Fontspring-DEMO-ceraroundpro-regular.otf") format("truetype");
+    font-size: 1em;
+    text-align: left;
+    margin: 0 0 5px 0;
+}
+
+.percent {
+    position: absolute;
+    right: 0;
+}
+
+/* Animations Below - Replace ease-out with infinite for infinite loop*/
+/*Edit here for html*/
+.bar-fill-html {
+    width: 90%;
+    background-color: #d400d4 !important;
+    animation: bar-fill-html 2s ease-out;
+    -moz-animation: bar-fill-html 2s ease-out;
+    -webkit-animation: bar-fill-html 2s ease-out;
+}
+
+@keyframes bar-fill-html {
+    0% {
+        width: 0px;
+    }
+
+    100% {
+        width: 90%;
+    }
+}
+
+@-moz-keyframes bar-fill-html {
+    0% {
+        width: 0px;
+    }
+
+    100% {
+        width: 90%;
+    }
+}
+
+@-webkit-keyframes bar-fill-html {
+    0% {
+        width: 0px;
+    }
+
+    100% {
+        width: 90%;
+    }
+}
+
+/*Edit here for Javascript*/
+.bar-fill-javascript {
+    width: 85%;
+    background-color: #d400d4;
+    animation: bar-fill-javascript 2s ease-out;
+    -moz-animation: bar-fill-javascript 2s ease-out;
+    -webkit-animation: bar-fill-javascript 2s ease-out;
+}
+
+@keyframes bar-fill-javascript {
+    0% {
+        width: 0px;
+    }
+
+    100% {
+        width: 60%;
+    }
+}
+
+@-moz-keyframes bar-fill-javascript {
+    0% {
+        width: 0px;
+    }
+
+    100% {
+        width: 85%;
+    }
+}
+
+@-webkit-keyframes bar-fill-javascript {
+    0% {
+        width: 0px;
+    }
+
+    100% {
+        width: 85%;
+    }
+}
+
+/*Edit here for Jquery*/
+.bar-fill-angular {
+    width: 70%;
+    background-color: #d400d4;
+    animation: bar-fill-angular 2s ease-out;
+    -moz-animation: bar-fill-angular 2s ease-out;
+    -webkit-animation: bar-fill-angular 2s ease-out;
+}
+
+@keyframes bar-fill-angular {
+    0% {
+        width: 0px;
+    }
+
+    100% {
+        width: 70%;
+    }
+}
+
+@-moz-keyframes bar-fill-angular {
+    0% {
+        width: 0px;
+    }
+
+    100% {
+        width: 70%;
+    }
+}
+
+@-webkit-keyframes bar-fill-angular {
+    0% {
+        width: 0px;
+    }
+
+    100% {
+        width: 70%;
+    }
+}
+
+/*Edit here for Responsive*/
+.bar-fill-bootstrap {
+    width: 90%;
+    background-color: #d400d4;
+    animation: bar-fill-bootstrap 2s ease-out;
+    -moz-animation: bar-fill-bootstrap 2s ease-out;
+    -webkit-animation: bar-fill-bootstrap 2s ease-out;
+}
+
+@keyframes bar-fill-bootstrap {
+    0% {
+        width: 0px;
+    }
+
+    100% {
+        width: 90%;
+    }
+}
+
+@-moz-keyframes bar-fill-bootstrap {
+    0% {
+        width: 0px;
+    }
+
+    100% {
+        width: 90%;
+    }
+}
+
+@-webkit-keyframes bar-fill-bootstrap {
+    0% {
+        width: 0px;
+    }
+
+    100% {
+        width: 90%;
+    }
+}
+
+/*Edit here for typescript*/
+.bar-fill-typescript {
+    width: 80%;
+    background-color: #d400d4;
+    animation: bar-fill-typescript 2s ease-out;
+    -moz-animation: bar-fill-typescript 2s ease-out;
+    -webkit-animation: bar-fill-typescript 2s ease-out;
+}
+
+@keyframes bar-fill-typescript {
+    0% {
+        width: 0px;
+    }
+
+    100% {
+        width: 80%;
+    }
+}
+
+@-moz-keyframes bar-fill-typescript {
+    0% {
+        width: 0px;
+    }
+
+    100% {
+        width: 80%;
+    }
+}
+
+@-webkit-keyframes bar-fill-typescript {
+    0% {
+        width: 0px;
+    }
+
+    100% {
+        width: 80%;
+    }
+}
+
+/*Edit here for dsa*/
+.bar-fill-dsa {
+    width: 80%;
+    background-color: #d400d4;
+    animation: bar-fill-dsa 2s ease-out;
+    -moz-animation: bar-fill-dsa 2s ease-out;
+    -webkit-animation: bar-fill-dsa 2s ease-out;
+}
+
+@keyframes bar-fill-dsa {
+    0% {
+        width: 0px;
+    }
+
+    100% {
+        width: 20%;
+    }
+}
+
+@-moz-keyframes bar-fill-dsa {
+    0% {
+        width: 0px;
+    }
+
+    100% {
+        width: 20%;
+    }
+}
+
+@-webkit-keyframes bar-fill-dsa {
+    0% {
+        width: 0px;
+    }
+
+    100% {
+        width: 20%;
+    }
+}
+
+/*Edit here for cpp*/
+.bar-fill-cpp {
+    width: 80%;
+    background-color: #d400d4;
+    animation: bar-fill-cpp 2s ease-out;
+    -moz-animation: bar-fill-cpp 2s ease-out;
+    -webkit-animation: bar-fill-cpp 2s ease-out;
+}
+
+@keyframes bar-fill-cpp {
+    0% {
+        width: 0px;
+    }
+
+    100% {
+        width: 80%;
+    }
+}
+
+@-moz-keyframes bar-fill-cpp {
+    0% {
+        width: 0px;
+    }
+
+    100% {
+        width: 80%;
+    }
+}
+
+@-webkit-keyframes bar-fill-cpp {
+    0% {
+        width: 0px;
+    }
+
+    100% {
+        width: 80%;
+    }
+}
+
+
+/*Edit here for cpp*/
+.bar-fill-node {
+    width: 60%;
+    background-color: #d400d4;
+    animation: bar-fill-node 2s ease-out;
+    -moz-animation: bar-fill-node 2s ease-out;
+    -webkit-animation: bar-fill-node 2s ease-out;
+}
+
+@keyframes bar-fill-node {
+    0% {
+        width: 0px;
+    }
+
+    100% {
+        width: 60%;
+    }
+}
+
+@-moz-keyframes bar-fill-node {
+    0% {
+        width: 0px;
+    }
+
+    100% {
+        width: 60%;
+    }
+}
+
+@-webkit-keyframes bar-fill-node {
+    0% {
+        width: 0px;
+    }
+
+    100% {
+        width: 60%;
+    }
+}
+
+/*Edit here for mongodb*/
+.bar-fill-mongo {
+    width: 60%;
+    background-color: #d400d4;
+    animation: bar-fill-mongo 2s ease-out;
+    -moz-animation: bar-fill-mongo 2s ease-out;
+    -webkit-animation: bar-fill-mongo 2s ease-out;
+}
+
+@keyframes bar-fill-mongo {
+    0% {
+        width: 0px;
+    }
+
+    100% {
+        width: 60%;
+    }
+}
+
+@-moz-keyframes bar-fill-mongo {
+    0% {
+        width: 0px;
+    }
+
+    100% {
+        width: 60%;
+    }
+}
+
+@-webkit-keyframes bar-fill-mongo {
+    0% {
+        width: 0px;
+    }
+
+    100% {
+        width: 60%;
+    }
+}
+
+
+.resume {
+    border-color: #cb6ce6;
+    color: #000;
+    box-shadow: 0 0 40px 40px #cb6ce6 inset, 0 0 0 0 #cb6ce6;
+    font-size: 14px;
+    letter-spacing: 4px;
+    border-radius: 10px;
+    line-height: 50px;
+    transition: all 150ms ease-in-out;
+
+    &:hover {
+        color: #fff;
+        background-color: #000;
+        box-shadow: 0 0 10px 0 #cb6ce6 inset, 0 0 10px 4px #cb6ce6;
+    }
+}
+
+.tagcloud {
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    margin: auto;
+    width: 50%;
+}
+
+.tagcloud--item:hover {
+    color: #36454F;
+}
+
+.experience {
+    font-size: 18px;
+    line-height: 2;
+    font-family: 'Apple Chancery', 'cursive';
+    color: rgb(181, 181, 181);
+    letter-spacing: 2.5px;
+}

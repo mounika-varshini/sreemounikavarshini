@@ -1,0 +1,358 @@
+// .container {
+//     display: flex;
+//     height: 50%
+// }
+
+// .box {
+//     flex: 1;
+//     background-color: gray;
+//     border: 1px solid black;
+//     aspect-ratio: 1/1;
+// }
+
+
+$base: linear-gradient(45deg, #00ccff, #0e1538, #0e1538, #cb6ce6);
+
+.pizza {
+    list-style: none;
+    position: relative;
+    top: 20%;
+    left: 35%;
+    width: 500px;
+    height: 500px;
+    padding: 0;
+    // border: 20px solid #fff;
+    // border-radius: 50%;
+    // box-shadow: 0 0 25px #0f0, inset 0 0 25px #0f0;
+    // -webkit-box-reflect: below 10px linear-gradient(transparent, transparent, #0002);
+    // animation: animate 5s linear infinite;
+    // filter: url(#wavy) blur(1px);
+}
+
+// .pizza:before {
+//     content: '';
+//     position: absolute;
+//     border: 20px solid #fff;
+//     border-radius: 50%;
+//     width: 500px;
+//     height: 500px;
+//     box-shadow: 0 0 25px #0f0, inset 0 0 25px #0f0;
+//     -webkit-box-reflect: below 10px linear-gradient(transparent, transparent, #0002);
+//     animation: animate 5s linear infinite;
+// }
+
+// .pizza:after {
+//     content: '';
+//     position: absolute;
+//     border: 20px solid #fff;
+//     border-radius: 50%;
+//     width: 500px;
+//     height: 500px;
+//     box-shadow: 0 0 25px #fff, inset 0 0 25px #fff;
+//     -webkit-box-reflect: below 10px linear-gradient(transparent, transparent, #0002);
+//     animation: animate 5s linear infinite;
+// }
+
+.pizza:nth-child(2):before {
+    animation-delay: -2.5s;
+}
+
+@keyframes annimate {
+    0% {
+        box-shadow: 0 0 25px #0f0, inset 0 0 25px #0f0;
+        filter: hue-rotate(0deg)
+    }
+
+    20% {
+        box-shadow: 0 0 60px #0f0, inset 0 0 60px #0f0;
+    }
+
+    40% {
+        box-shadow: 0 0 40px #0f0, inset 0 0 40px #0f0;
+    }
+
+    60% {
+        box-shadow: 0 0 80px #0f0, inset 0 0 80px #0f0;
+    }
+
+    80% {
+        box-shadow: 0 0 100px #0f0, inset 0 0 100px #0f0;
+    }
+
+    100% {
+        box-shadow: 0 0 25px #0f0, inset 0 0 25px #0f0;
+        filter: hue-rotate(360deg)
+    }
+}
+
+.pizza li {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    clip-path: url(#slice);
+
+    a {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+
+    transition:transform 0.5s;
+
+    &:hover {
+        // background-color: gold;
+        transition: transform 0.5s;
+    }
+}
+
+.one {
+    a {
+        background-image: url('../../assets/arena.png');
+        background-position: 20% 15%;
+        border: 2px solid #4354a5;
+        border-radius: 50%;
+        box-shadow: 0 0 25px #00ccff, inset 0 0 25px #cb6ce6;
+        -webkit-box-reflect: below 10px linear-gradient(transparent, transparent, #0002);
+        animation: animate 5s linear infinite;
+        background-size: 10rem 10rem;
+        background-repeat: no-repeat;
+        transform: rotate(0deg);
+    }
+
+    .overlay1 {
+        position: absolute;
+        top: 4%;
+        left: 22%;
+        bottom: 0;
+        width: 35%;
+        color: #fff;
+        opacity: 0;
+        line-height: 1.5;
+
+        h2 {
+            padding-top: 20%;
+            font-family: "Cera Round Pro";
+            src: url("../../assets/cera-round-pro-free-font/Demo_fonts/Fontspring-DEMO-ceraroundpro-regular.otf") format("truetype");
+            font-size: xxx-large;
+            color: #cb6ce6;
+        }
+
+        p {
+            font-family: "Cera Round Pro";
+            src: url("../../assets/cera-round-pro-free-font/Demo_fonts/Fontspring-DEMO-ceraroundpro-regular.otf") format("truetype");
+            position: relative;
+            left: -22.5%;
+            font-size: 15.5px;
+            color: rgb(181, 181, 181);
+        }
+    }
+
+    // &:hover {
+    //     // a {
+    //     //     filter: blur(5px);
+    //     // }
+
+    //     // .overlay {
+    //     //     opacity: 1;
+    //     // }
+
+
+    // }
+}
+
+.one::before,
+.two::before,
+.three::before,
+.four::before,
+.one::after,
+.two::after,
+.three::after,
+.four::after {
+    content: "";
+    position: absolute;
+    background: linear-gradient(45deg, #00ccff, #0e1538, #0e1538, #cb6ce6) !important;
+}
+
+.one::before,
+.two::before,
+.three::before,
+.four::before {
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 10px;
+    /* Adjust the height of the horizontal line as desired */
+    transform: translateY(-50%);
+}
+
+.one::after,
+.two::after,
+.three::after,
+.four::after {
+    top: 0;
+    left: 50%;
+    width: 10px;
+    /* Adjust the width of the vertical line as desired */
+    height: 100%;
+    transform: translateX(-50%);
+}
+
+.two {
+    transform: rotate(-90deg);
+
+    a {
+        background-image: url('../../assets/quiz.png');
+        background-position: 20% 15%;
+        background-size: 12rem 12rem;
+        background-repeat: no-repeat;
+        border: 2px solid #4354a5;
+        border-radius: 50%;
+        box-shadow: 0 0 25px #00ccff, inset 0 0 25px #cb6ce6;
+        -webkit-box-reflect: below 10px linear-gradient(transparent, transparent, #0002);
+        animation: animate 5s linear infinite;
+    }
+
+    .overlay2 {
+        position: absolute;
+        top: -21%;
+        left: -22%;
+        bottom: 0;
+        width: 31%;
+        color: #fff;
+        opacity: 0;
+        line-height: 1.5;
+        transform: rotate(90deg);
+
+        h2 {
+            padding-top: 20%;
+            font-family: "Cera Round Pro";
+            src: url("../../assets/cera-round-pro-free-font/Demo_fonts/Fontspring-DEMO-ceraroundpro-regular.otf") format("truetype");
+            font-size: xxx-large;
+            color: #cb6ce6;
+        }
+
+        p {
+            font-family: "Cera Round Pro";
+            src: url("../../assets/cera-round-pro-free-font/Demo_fonts/Fontspring-DEMO-ceraroundpro-regular.otf") format("truetype");
+            position: relative;
+            left: -22.5%;
+            font-size: 15.5px;
+            color: rgb(181, 181, 181);
+        }
+    }
+
+    // &:active {
+    //     width: 50rem !important;
+    //     height: 50rem !important;
+    //     background-color: red !important;
+    //     // transform: rotate(-90deg);
+    // }
+}
+
+.three {
+    a {
+        background-image: url('../../assets/dice.png');
+        background-position: 20% 15%;
+        border: 2px solid #4354a5;
+        box-shadow: 0 0 25px #00ccff, inset 0 0 25px #cb6ce6;
+        border-radius: 50%;
+        -webkit-box-reflect: below 10px linear-gradient(transparent, transparent, #0002);
+        animation: animate 5s linear infinite;
+        background-size: 10rem 10rem;
+        background-repeat: no-repeat;
+    }
+
+    transform: rotate(-180deg);
+
+    .overlay3 {
+        position: absolute;
+        top: 12%;
+        left: 2%;
+        width: 35%;
+        color: #fff;
+        opacity: 0;
+        line-height: 1.5;
+        transform: rotate(180deg);
+
+        h2 {
+            padding-top: 20%;
+            font-family: "Cera Round Pro";
+            src: url("../../assets/cera-round-pro-free-font/Demo_fonts/Fontspring-DEMO-ceraroundpro-regular.otf") format("truetype");
+            font-size: xxx-large;
+            color: #cb6ce6;
+            left: -10%;
+            position: relative;
+        }
+
+        p {
+            font-family: "Cera Round Pro";
+            src: url("../../assets/cera-round-pro-free-font/Demo_fonts/Fontspring-DEMO-ceraroundpro-regular.otf") format("truetype");
+            position: relative;
+            left: -22.5%;
+            font-size: 15.5px;
+            color: rgb(181, 181, 181);
+        }
+    }
+
+    // &:hover {
+    //     transform: translate(-10%, -5%) rotate(-180deg);
+    // }
+}
+
+.four {
+    a {
+        background-image: url('../../assets/winrace.png');
+        background-position: 20% 0%;
+        border: 2px solid #4354a5 !important;
+        box-shadow: 0 0 25px #00ccff, inset 0 0 25px #cb6ce6;
+        border-radius: 50%;
+        -webkit-box-reflect: below 10px linear-gradient(transparent, transparent, #0002);
+        animation: animate 5s linear infinite;
+        background-size: 11rem 15rem;
+        background-repeat: no-repeat;
+    }
+
+    transform: rotate(-270deg);
+
+    .overlay4 {
+        position: absolute;
+        top: -57%;
+        left: 69%;
+        bottom: 0;
+        width: 35%;
+        color: #fff;
+        opacity: 0;
+        line-height: 1.5;
+        transform: rotate(270deg);
+
+        h2 {
+            padding-top: 20%;
+            font-family: "Cera Round Pro";
+            src: url("../../assets/cera-round-pro-free-font/Demo_fonts/Fontspring-DEMO-ceraroundpro-regular.otf") format("truetype");
+            font-size: xxx-large;
+            color: #cb6ce6;
+            left: -19%;
+            position: relative;
+        }
+
+        p {
+            font-family: "Cera Round Pro";
+            src: url("../../assets/cera-round-pro-free-font/Demo_fonts/Fontspring-DEMO-ceraroundpro-regular.otf") format("truetype");
+            position: relative;
+            left: -22.5%;
+            font-size: 15.5px;
+            color: rgb(181, 181, 181);
+        }
+    }
+
+    // &:hover {
+    //     transform: translate(-10%, 5%) rotate(-270deg);
+    // }
+}
+
+// .animateCircle {
+//     width: 0;
+//     height: 0;
+// }

@@ -1,0 +1,92 @@
+@import url("https://fonts.googleapis.com/css2?family=Grandstander&display=swap");
+
+body {
+  font-family: "Grandstander", cursive;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  height: 100vh;
+}
+
+.side-nav,
+.nav-menu {
+  height: 100vh;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(39, 39, 39);
+  overflow: auto;
+}
+
+.side-nav .nav-menu {
+  list-style: none;
+  border-right: 1px solid rgb(45, 44, 44);
+  background-color: transparent;
+}
+
+.side-nav .nav-item {
+  position: relative;
+  padding: 15px 10px;
+  border-top: 1px solid rgb(45, 44, 44);
+}
+
+.active {
+  color: #cb6ce6 !important;
+}
+
+.nav-item.active a {
+  color: #2980b9;
+}
+
+.nav-item a {
+  text-decoration: none;
+  color: gray;
+}
+
+.side-nav .nav-item.active::before {
+  content: "";
+  position: absolute;
+  background-color: transparent;
+  bottom: 100%;
+  right: 0;
+  height: 150%;
+  width: 20px;
+  border-bottom-right-radius: 25px;
+  box-shadow: 0 20px 0 0 #fff;
+}
+
+.side-nav .nav-item.active::after {
+  content: "";
+  position: absolute;
+  background-color: transparent;
+  top: 100%;
+  right: 0;
+  height: 150%;
+  width: 20px;
+  border-top-right-radius: 25px;
+  box-shadow: 0 -20px 0 0 #fff;
+}
+
+.resume {
+  border-color: #cb6ce6;
+  color: #000;
+  box-shadow: 0 0 40px 40px #cb6ce6 inset, 0 0 0 0 #cb6ce6;
+  font-size: 12px;
+  border-radius: 5px;
+  padding: 0.3rem;
+  margin: 0.5rem;
+  transition: all 150ms ease-in-out;
+
+  &:hover {
+    color: #fff;
+    background-color: #000;
+    box-shadow: 0 0 5px 0 #cb6ce6 inset, 0 0 5px 4px #cb6ce6;
+  }
+}
