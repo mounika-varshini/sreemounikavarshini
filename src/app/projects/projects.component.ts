@@ -29,10 +29,14 @@ export class ProjectsComponent implements OnInit {
   img4 = document.getElementsByClassName('img4');
   heading4 = document.getElementsByClassName('heading4');
 
+  icon1 = document.getElementsByClassName('icon1');
+  icon2 = document.getElementsByClassName('icon2');
+  icon3 = document.getElementsByClassName('icon3');
+  icon4 = document.getElementsByClassName('icon4');
+
   constructor(private router: Router) { }
 
   ngOnInit(): void {
-    console.log(this.slice1, this.pizza)
     for (let i = 0; i < this.slice1.length; i++) {
       const slice = this.slice1[i] as HTMLElement;
       const circle = this.pizza[i] as HTMLElement;
@@ -44,7 +48,11 @@ export class ProjectsComponent implements OnInit {
       const img2 = this.img2[i] as HTMLElement;
       const img3 = this.img3[i] as HTMLElement;
       const img4 = this.img4[i] as HTMLElement;
-      const arena = this.heading1[i] as HTMLElement;
+      const icon1 = this.icon1[i] as HTMLElement;
+
+      icon1.addEventListener('click', (event) => {
+        this.arena(event);
+      })
 
       slice.addEventListener('click', (event) => {
         const targetElement: HTMLElement = event.target as HTMLElement;
@@ -79,7 +87,6 @@ export class ProjectsComponent implements OnInit {
       document.addEventListener('mousedown', (event) => {
         // Reset the translation when the mouse leaves the element
         const targetElement: HTMLElement = event.target as HTMLElement;
-        console.log(targetElement)
         // if (slice && !slice.contains(targetElement)) {
         img1.style.filter = `blur(0px)`;
         text.style.opacity = `0`;
@@ -121,14 +128,17 @@ export class ProjectsComponent implements OnInit {
       const img2 = this.img1[i] as HTMLElement;
       const img3 = this.img3[i] as HTMLElement;
       const img4 = this.img4[i] as HTMLElement;
-      const arena = this.heading2[i] as HTMLElement;
+      const icon2 = this.icon2[i] as HTMLElement;
+
+      icon2.addEventListener('click', (event) => {
+        this.quiz(event);
+      })
       // circle.style.border = `20px solid #fff`;
       // circle.style.borderRadius = `50%`;
       // circle.style.boxShadow = ` 0 0 50px #0f0, inset 0 0 50px #0f0`;
       // (circle.style as any).webkitBoxReflect = `below 10px linear-gradient(transparent, transparent, #0002)`;
       // circle.style.animation = `animate 5s linear infinite`;
       slice.addEventListener('click', (event) => {
-        console.log(text)
         img1.style.filter = `blur(5px)`;
         text.style.opacity = `1`;
         text.style.zIndex = `2`;
@@ -201,9 +211,12 @@ export class ProjectsComponent implements OnInit {
       const img2 = this.img1[i] as HTMLElement;
       const img3 = this.img2[i] as HTMLElement;
       const img4 = this.img4[i] as HTMLElement;
-      const arena = this.heading3[i] as HTMLElement;
+      const icon3 = this.icon3[i] as HTMLElement;
+
+      icon3.addEventListener('click', (event) => {
+        this.diceToss(event);
+      })
       slice.addEventListener('click', (event) => {
-        console.log('HI')
         img1.style.filter = `blur(5px)`;
         text.style.opacity = `1`;
         text.style.zIndex = `2`;
@@ -274,9 +287,12 @@ export class ProjectsComponent implements OnInit {
       const img2 = this.img1[i] as HTMLElement;
       const img3 = this.img3[i] as HTMLElement;
       const img4 = this.img2[i] as HTMLElement;
-      const arena = this.heading4[i] as HTMLElement;
+      const icon4 = this.icon4[i] as HTMLElement;
+
+      icon4.addEventListener('click', (event) => {
+        this.winRace(event);
+      })
       slice.addEventListener('click', (event) => {
-        console.log('HI')
         img1.style.filter = `blur(5px)`;
         text.style.opacity = `1`;
         text.style.zIndex = `3`;
