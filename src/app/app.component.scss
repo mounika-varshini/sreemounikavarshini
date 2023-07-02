@@ -90,3 +90,10 @@ body {
     box-shadow: 0 0 5px 0 #cb6ce6 inset, 0 0 5px 4px #cb6ce6;
   }
 }
+
+.comp {
+  height: 100vh;
+  width: 100vw;
+  background-color: black !important;
+  overflow: hidden;
+}

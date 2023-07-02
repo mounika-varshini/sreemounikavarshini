@@ -1,11 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
-.container {
+.container1 {
     position: relative;
-    height: 100vh;
-    width: 100vw;
-    background-color: black;
-    left: 10%;
+    left: 7.5%;
 }
 
 .list {
@@ -470,7 +467,8 @@ ul {
 .experience {
     font-size: 18px;
     line-height: 2;
-    font-family: 'Apple Chancery', 'cursive';
+    font-family: 'Apple Chancery', 'Cera Round Pro', cursive;
+    src: url("../../assets/cera-round-pro-free-font/Demo_fonts/Fontspring-DEMO-ceraroundpro-regular.otf") format("truetype");
     color: rgb(181, 181, 181);
     letter-spacing: 2.5px;
 }
