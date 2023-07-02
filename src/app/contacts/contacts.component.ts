@@ -10,7 +10,7 @@ import { ToastrService } from 'ngx-toastr';
 })
 export class ContactsComponent implements OnInit {
 
-  
+
   constructor(private toastService: ToastrService) {
   }
 
@@ -105,7 +105,6 @@ export class ContactsComponent implements OnInit {
           },
         ],
       });
-      console.log(map)
       setMarkers(map);
     }
 
@@ -168,10 +167,9 @@ export class ContactsComponent implements OnInit {
       frm.reset();  // Reset all form data
       this.toastService.success('Your message has been received loud and clear. Cheers!');
     }
-    else{
-      console.log('hi')
+    else {
       this.toastService.error('Please fill in all required fields!');
-    } 
+    }
     return false; // Prevent page refresh
   }
 

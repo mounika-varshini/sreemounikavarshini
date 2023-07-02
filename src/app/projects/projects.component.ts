@@ -48,12 +48,6 @@ export class ProjectsComponent implements OnInit {
       const img2 = this.img2[i] as HTMLElement;
       const img3 = this.img3[i] as HTMLElement;
       const img4 = this.img4[i] as HTMLElement;
-      const icon1 = this.icon1[i] as HTMLElement;
-
-      icon1.addEventListener('click', (event) => {
-        this.arena(event);
-      })
-
       slice.addEventListener('click', (event) => {
         const targetElement: HTMLElement = event.target as HTMLElement;
         img1.style.filter = `blur(5px)`;
@@ -87,6 +81,9 @@ export class ProjectsComponent implements OnInit {
       document.addEventListener('mousedown', (event) => {
         // Reset the translation when the mouse leaves the element
         const targetElement: HTMLElement = event.target as HTMLElement;
+        if (targetElement.className == 'heading1' || targetElement.id == 'icon1') {
+          this.arena(event);
+        }
         // if (slice && !slice.contains(targetElement)) {
         img1.style.filter = `blur(0px)`;
         text.style.opacity = `0`;
@@ -130,15 +127,13 @@ export class ProjectsComponent implements OnInit {
       const img4 = this.img4[i] as HTMLElement;
       const icon2 = this.icon2[i] as HTMLElement;
 
-      icon2.addEventListener('click', (event) => {
-        this.quiz(event);
-      })
       // circle.style.border = `20px solid #fff`;
       // circle.style.borderRadius = `50%`;
       // circle.style.boxShadow = ` 0 0 50px #0f0, inset 0 0 50px #0f0`;
       // (circle.style as any).webkitBoxReflect = `below 10px linear-gradient(transparent, transparent, #0002)`;
       // circle.style.animation = `animate 5s linear infinite`;
       slice.addEventListener('click', (event) => {
+        const targetElement: HTMLElement = event.target as HTMLElement;
         img1.style.filter = `blur(5px)`;
         text.style.opacity = `1`;
         text.style.zIndex = `2`;
@@ -168,6 +163,9 @@ export class ProjectsComponent implements OnInit {
       document.addEventListener('mousedown', (event) => {
         // Reset the translation when the mouse leaves the element
         const targetElement: HTMLElement = event.target as HTMLElement;
+        if (targetElement.className == 'heading2' || targetElement.id == 'icon2') {
+          this.quiz(event);
+        }
         // if (slice && !slice.contains(targetElement)) {
         img1.style.filter = `blur(0px)`;
         text.style.opacity = `0`;
@@ -213,10 +211,8 @@ export class ProjectsComponent implements OnInit {
       const img4 = this.img4[i] as HTMLElement;
       const icon3 = this.icon3[i] as HTMLElement;
 
-      icon3.addEventListener('click', (event) => {
-        this.diceToss(event);
-      })
       slice.addEventListener('click', (event) => {
+        const targetElement: HTMLElement = event.target as HTMLElement;
         img1.style.filter = `blur(5px)`;
         text.style.opacity = `1`;
         text.style.zIndex = `2`;
@@ -246,6 +242,9 @@ export class ProjectsComponent implements OnInit {
       document.addEventListener('mousedown', (event) => {
         // Reset the translation when the mouse leaves the element
         const targetElement: HTMLElement = event.target as HTMLElement;
+        if (targetElement.className == 'heading3' || targetElement.id == 'icon3') {
+          this.diceToss(event);
+        }
         // if (slice && !slice.contains(targetElement)) {
         img1.style.filter = `blur(0px)`;
         text.style.opacity = `0`;
@@ -289,13 +288,11 @@ export class ProjectsComponent implements OnInit {
       const img4 = this.img2[i] as HTMLElement;
       const icon4 = this.icon4[i] as HTMLElement;
 
-      icon4.addEventListener('click', (event) => {
-        this.winRace(event);
-      })
       slice.addEventListener('click', (event) => {
+        const targetElement: HTMLElement = event.target as HTMLElement;
         img1.style.filter = `blur(5px)`;
         text.style.opacity = `1`;
-        text.style.zIndex = `3`;
+        text.style.zIndex = `2`;
         slice.style.transition = `transform 0.5s`
         slice.style.transform = `scale(1) translate(-200px, -100px) rotate(-270deg)`;
         circle.style.transition = `transform 1s`;
@@ -322,6 +319,9 @@ export class ProjectsComponent implements OnInit {
       document.addEventListener('mousedown', (event) => {
         // Reset the translation when the mouse leaves the element
         const targetElement: HTMLElement = event.target as HTMLElement;
+        if (targetElement.className == 'heading4' || targetElement.id == 'icon4') {
+          this.winRace(event);
+        }
         // if (slice && !slice.contains(targetElement)) {
         img1.style.filter = `blur(0px)`;
         text.style.opacity = `0`;
@@ -355,7 +355,6 @@ export class ProjectsComponent implements OnInit {
   }
 
   arena(event: any) {
-    console.log('redirect')
     event.stopPropagation();
     window.open('https://inncirclesarena.com');
   }
